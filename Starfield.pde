@@ -2,6 +2,7 @@
 void setup()
 {
 	//your code here
+	size(400, 400);
 }
 void draw()
 {
@@ -10,6 +11,8 @@ void draw()
 class NormalParticle
 {
 	//your code here
+	int myX, myY;
+	double nSpeed, nDirection
 }
 interface Particle
 {
