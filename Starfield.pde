@@ -11,8 +11,15 @@ void draw()
 class NormalParticle
 {
 	//your code here
-	int myX, myY;
-	double nSpeed, nDirection
+	color cNormal;
+	double myX, myY, nSpeed, nDirection;
+	NormalParticle()
+	{
+		cNormal = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+		myX = Math.random()*401;
+		myY = Math.random()*401;
+		nSpeed = Math.random()*11;
+	}
 }
 interface Particle
 {
