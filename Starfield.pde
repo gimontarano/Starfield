@@ -12,13 +12,23 @@ class NormalParticle
 {
 	//your code here
 	color cNormal;
-	double myX, myY, nSpeed, nDirection;
+	double myX, myY, nSpeed, nDirection, nSize;
 	NormalParticle()
 	{
 		cNormal = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
 		myX = Math.random()*401;
 		myY = Math.random()*401;
 		nSpeed = Math.random()*11;
+		nSize = Math.random()*10+10;
+	}
+	void show()
+	{
+		fill(cNormal);
+		ellipse(myX, myY, nSize, nSize);
+	}
+	void move()
+	{
+		
 	}
 }
 interface Particle
