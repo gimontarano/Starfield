@@ -1,37 +1,35 @@
 //your code here
-Particle[] particles = new Particle[505];
+//Particle[] particles = new Particle[505];
+Particle[] particles = new Particle[1];
 void setup()
 {
-	//your code here
 	size(400, 400);
+	background(0);
 	frameRate(1);
-	for(int i = 0; i < 500; i++)
-	{
-		particles[i] = new NormalParticle();
-	}
-	for(int i = 500; i < 504; i++)
-	{
-		particles[i] = new JumboParticle();
-	}
-	particles[504] = new OddballParticle();
+	particles[0] = new NormalParticle();
+	//for(int i = 0; i < 500; i++)
+	//{
+	//	particles[i] = new NormalParticle();
+	//}
+	//for(int i = 500; i < 504; i++)
+	//{
+	//	particles[i] = new JumboParticle();
+	//}
+	//particles[504] = new OddballParticle();
 }
 void draw()
 {
-	//your code here
-	
 	background(0);
-	
-	for(int i = 0; i < 505; i++)
-	{
-		particles[i].move();
-		particles[i].show();
-	}
-
-
+	//for(int i = 0; i < 505; i++)
+	//{
+	//	particles[i].move();
+	//	particles[i].show();
+	//}
+	particles[0].move();
+	particles[0].show();
 }
 class NormalParticle implements Particle
 {
-	//your code here
 	int myX, myY, nSize;
 	double nDirection, nSpeed;
 	NormalParticle()
@@ -52,7 +50,7 @@ class NormalParticle implements Particle
 	public void move()
 	{
 		nDirection = Math.random()*2*Math.PI;
-		nSpeed = Math.random()*11;
+		nSpeed = Math.random();
 		myX = myX + (int)(Math.cos(nDirection)*nSpeed);
 		myY = myY + (int)(Math.sin(nDirection)*nSpeed);
 	}
@@ -88,7 +86,6 @@ class OddballParticle implements Particle //uses an interface
 	{
 		nSize = 50;
 		rect(myX, myY, nSize, nSize);
-
 	}
 	
 }
